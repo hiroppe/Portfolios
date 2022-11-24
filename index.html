@@ -4,18 +4,33 @@
 	<meta charset="UTF-8"/>
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<link rel="shortcut icon" href="./images/favicon.ico">
-	<title>Axios</title>
+	<title>WeatherApp</title>
 	<!-- CSS -->
 	<link rel="stylesheet" href="./css/custom.css">
 </head>
 <body>
-	<h1>Axios</h1>
-	<p>
-		<a href="https://zenn.dev/sdkfz181tiger/articles/b99bf6da226fb9" target="_blank">Axiosであっさりファイルアクセス</a>
-	</p>
+	<header>
+		<h1>岐阜県の天気(きょう)</h1>
+	</header>
+	<div id="container">
+		<main>
+			<p id="mino"><!--ここに地名が入る--></p>
+			<div id="weather_mark_1">
+				<!--ここに天気マークが入る-->
+			</div>
+			<h2>岐阜市の最高気温<span id="high_1"><!--ここに数字が入る--></span>℃</h2>
+		</main>
+		<aside>
+			<p id="hida"><!--ここに地名が入る--></p>
+			<div id="weather_mark_2">
+				<!--ここに天気マークが入る-->
+			</div>
+			<h2>高山市の最高気温<span id="high_2"><!--ここに数字が入る--></span>℃</h2>
+		</aside>
+	</div>
 	<!-- JavaScript -->
-	<script src="//code.jquery.com/jquery-3.6.1.min.js"></script>
 	<script src="//cdn.jsdelivr.net/npm/axios@0.21.1/dist/axios.min.js"></script>
+	<script src="//code.jquery.com/jquery-3.6.1.min.js"></script>
 	<script src="./main.js"></script>
 </body>
 </html>
