@@ -4,18 +4,31 @@
 	<meta charset="UTF-8"/>
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<link rel="shortcut icon" href="./images/favicon.ico">
-	<title>Portfolios</title>
+	<title>Research</title>
 	<!-- CSS -->
 	<link rel="stylesheet" href="./css/custom.css">
 </head>
 <body>
-	<h1>Portfolios</h1>
-	<ol>
-		<li><a href="./portfolios/app01/">ポン出しくん</a></li>
-		<li><a href="./portfolios/app02/">お天気くん</a></li>
-		<li><a href="./portfolios/app03/">xxくん</a></li>
-	</ul>
-
+	<div id="container">
+		<header>
+			<h1>割り勘計算アプリ</h1>
+		</header>
+		<div id="warikan_keisan">
+			<input type="text" placeholder="金額を入力" class="total">
+			<p>➗</p>
+			<input type="text" placeholder="人数を入力" class="ninzuu">
+			<p>＝</p>
+			<p class="perperson"></p>
+		</div>
+		<div id="result">
+			<p>一人あたりの料金は<span></span>円です。</p>
+		</div>
+		<div id="btn">
+			<button class="calculation" onclick="zikou1()">計算する</button>
+			<button class="reset" onclick="zikou2()">リセット</button>
+			<button class="reset_goukei" onclick="zikou3()">合計金額リセット</button>
+			<button class="reset_ninzuu" onclick="zikou4()">人数リセット</button>
+		</div>
 	<!-- JavaScript -->
 	<script src="//cdn.jsdelivr.net/npm/axios@0.21.1/dist/axios.min.js"></script>
 	<script src="//code.jquery.com/jquery-3.6.1.min.js"></script>
