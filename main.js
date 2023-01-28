@@ -1,87 +1,150 @@
-console.log("main.js!!");
-
-let zikou1;// 計算処理用変数
-let zikou2;// リセット処理用変数
-let zikou3;// 合計金額リセット処理用変数
-let zikou4;// 人数リセット処理用変数
-
-let btn_reset;// リセットボタンの表示設定用変数
-let btn_reset_goukei;// 合計金額リセットボタンの表示設定用変数
-let btn_reset_ninzuu;// 人数リセットボタンの表示設定用変数
+let switching;
+let answer1;
+let answer2;
+let answer3;
+let answer4;
 
 $(document).ready(()=>{
-	console.log("Ready!!");
+    let classes = ['one','two','three','four'];
+    for(let classnames of classes){
+        $(`.${classnames}`).prop("disabled", true);
+    }
 
-	//●リセットボタンの表示処理
-	let kirikae_reset;
-	btn_reset = () => {
-		if(kirikae_reset === 0){
-			$(".reset").prop("disabled", true);
-		}
-		else if(kirikae_reset === 1){
-			$(".reset").prop("disabled", false);
-		}
-	}
-	let kirikae_reset_goukei;
-	btn_reset_goukei = () => {
-		if(kirikae_reset_goukei === 2){
-			$(".reset_goukei").prop("disabled", true);
-		}
-		else if(kirikae_reset_goukei === 3){
-			$(".reset_goukei").prop("disabled", false);
-		}
-	}
-	let kirikae_reset_ninzuu;
-	btn_reset_ninzuu = () => {
-		if(kirikae_reset_ninzuu === 4){
-			$(".reset_ninzuu").prop("disabled", true);
-		}
-		else if(kirikae_reset_ninzuu === 5){
-			$(".reset_ninzuu").prop("disabled", false);
-		}
-	}
+	const option = {responseType: "blob"};
+    axios.get('data.json', option).then(res=>{
+        // 通信が成功した場合
+        res.data.text().then(str=>{
+            let arr = JSON.parse(str);
+            console.log(arr);
+            
+            let btn_text = 0
+            let prognum = 0
+            let datanum = -1
+            switching = () => {
+                for(let classnames of classes){
+                    $(`.${classnames}`).prop("disabled", false);
+                }
+                $('.next').prop("disabled", true);
+                $('.torf').text('');
+                $('.answer_text').text('');
+                $('.next').text('次の問題へ');
 
-	//●ロードしたときの処理
-	btn_reset(kirikae_reset = 0);
-	btn_reset_goukei(kirikae_reset_goukei = 2)
-	btn_reset_ninzuu(kirikae_reset_ninzuu = 4)
+                prognum += 1
+                $('.num').text(prognum);
+                if(prognum === 4){
+                    $('.next').text('終わり');
+                }
 
-	//●計算処理
+                datanum += 1
+                $('h2').text(arr['questionList'][datanum]['question']);
+                $('img').attr('src',`images/${arr['questionList'][datanum]['src']}`)
+                if(datanum >= 2){
+                    $('img').css({
+                        'width':'250px',
+                        'height':'350px',
+                        'padding-left':'380px',
+                    })
+                }
 
-	//計算するボタン処理
-	zikou1 = () => {
-		btn_reset(kirikae_reset = 1);
-		btn_reset_goukei(kirikae_reset_goukei = 3)
-		btn_reset_ninzuu(kirikae_reset_ninzuu = 5)
-		let total_num = $('.total').val()
-		//console.log(total_num);
-		let ninzuu_num = $('.ninzuu').val()
-		//console.log(ninzuu_num);
-		let kekka = Math.floor(total_num / ninzuu_num)
-		$('.perperson').text(kekka);
-		$('span').text(kekka);
-	}
+                for(let classnames of classes){
+                    $(`.${classnames}`).text(arr['questionList'][datanum]['choice'][btn_text]);
+                    btn_text += 1
+                    if(btn_text === 4){
+                        btn_text = 0;
+                    }
+                }
+            }
 
-	//●リセット処理
+            let score = 0;
+            answer1 = () => {
+                for(let classnames of classes){
+                    $(`.${classnames}`).prop("disabled", true);
+                }
+                if($('.one').text() === arr['questionList'][datanum]['answer']){
+                    $('.torf').text('正解');
+                    $('.answer_text').text(arr['questionList'][datanum]['answer']);
+                    score += 1;
+                    $('.score').text(score);
+                }
+                else{
+                    $('.torf').text('不正解');
+                    $('.answer_text').text(arr['questionList'][datanum]['answer']);
+                }
+                $('.next').prop("disabled", false);
+                if(prognum === 4){
+                    $('.next').prop("disabled", true);
+                }
+            }
+            answer2 = () => {
+                for(let classnames of classes){
+                    $(`.${classnames}`).prop("disabled", true);
+                }
+                if($('.two').text() === arr['questionList'][datanum]['answer']){
+                    $('.torf').text('正解');
+                    $('.answer_text').text(arr['questionList'][datanum]['answer']);
+                    score += 1;
+                    $('.score').text(score);
+                }
+                else{
+                    $('.torf').text('不正解');
+                    $('.answer_text').text(arr['questionList'][datanum]['answer']);
+                }
+                $('.next').prop("disabled", false);
+                if(prognum === 4){
+                    $('.next').prop("disabled", true);
+                }
+            }
+            answer3 = () => {
+                for(let classnames of classes){
+                    $(`.${classnames}`).prop("disabled", true);
+                }
+                if($('.three').text() === arr['questionList'][datanum]['answer']){
+                    $('.torf').text('正解');
+                    $('.answer_text').text(arr['questionList'][datanum]['answer']);
+                    score += 1;
+                    $('.score').text(score);
+                }
+                else{
+                    $('.torf').text('不正解');
+                    $('.answer_text').text(arr['questionList'][datanum]['answer']);
+                }
+                $('.next').prop("disabled", false);
+                if(prognum === 4){
+                    $('.next').prop("disabled", true);
+                }
+            }
+            answer4 = () => {
+                for(let classnames of classes){
+                    $(`.${classnames}`).prop("disabled", true);
+                }
+                if($('.four').text() === arr['questionList'][datanum]['answer']){
+                    $('.torf').text('正解');
+                    $('.answer_text').text(arr['questionList'][datanum]['answer']);
+                    score += 1;
+                    $('.score').text(score);
+                }
+                else{
+                    $('.torf').text('不正解');
+                    $('.answer_text').text(arr['questionList'][datanum]['answer']);
+                }
+                $('.next').prop("disabled", false);
+                if(prognum === 4){
+                    $('.next').prop("disabled", true);
+                }
+            }
+        });
+    }).catch(err=>{
+        // 通信が失敗した場合
+        console.log(err);
 
-	//リセットボタン処理
-	zikou2 = ()=> {
-		btn_reset(kirikae_reset = 0);
-		btn_reset_goukei(kirikae_reset_goukei = 2)
-		btn_reset_ninzuu(kirikae_reset_ninzuu = 4)
-		$('.total').val('');
-		$('.ninzuu').val('')
-		$('.perperson').text('');
-		$('span').text('');
-	}
-	//合計金額リセットボタン処理
-	zikou3 = () => {
-		$('.total').val('');
-		btn_reset_goukei(kirikae_reset_goukei = 2)
-	}
-	//人数リセットボタン処理
-	zikou4 = () => {
-		$('.ninzuu').val('');
-		btn_reset_ninzuu(kirikae_reset_ninzuu = 4)
-	}
+        $('.num').text('-');
+        $('h2').text('表示できません。');
+        for(let classnames of classes){
+            $(`.${classnames}`).text('読み込み中');
+        }
+        $('.torf').text('開始出来ません。');
+        $('.answer_text').text('ボタンを押さないでください。');
+        $('.score').text('-');
+        $('.next').text('準備中');
+    });
 });

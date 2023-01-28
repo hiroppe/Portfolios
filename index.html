@@ -4,17 +4,33 @@
 	<meta charset="UTF-8"/>
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<link rel="shortcut icon" href="./images/favicon.ico">
-	<title>Research</title>
+	<title>九州新幹線クイズ</title>
 	<!-- CSS -->
-	<link rel="stylesheet" href="./css/custom.css">
+	<link rel="stylesheet" href="style.css">
 </head>
 <body>
-	<h1>冬休みの宿題</h1>
-    <ol>
-        <li><a href="homework1/index.html">geolocationを使ってみた</a></li>
-        <li><a href="homework2/index.html">for...in文を使ってみた</a></li>
-        <li><a href="homework3/index.html">function returnを使ってみた</a></li>
-    </ol>
+	<div id="container">
+        <header>
+            <h1>西九州新幹線開業記念<br>九州新幹線クイズ</h1>
+        </header>
+        <div class="problem">
+            <p class="probnum">第<span class="num">--</span>問</p>
+            <h2>問題＆画像が表示されます。</h2>
+            <img src="images/つばめ ロゴ.jpeg">
+        </div>
+        <div class="button">
+            <button class="one" onclick="answer1()">選択肢１</button>
+            <button class="two" onclick="answer2()">選択肢２</button>
+            <button class="three" onclick="answer3()">選択肢３</button>
+            <button class="four" onclick="answer4()">選択肢４</button>
+            <h3>結果：<span class="torf">スタートボタンを押してください。</span></h3>
+            <h3>答え：<span class="answer_text">押したら始まります。</span></h3>
+        </div>
+        <div class="btntxt">
+            <h3 class="result">得点：<span class="score">0</span>点</h3>
+            <button class="next" onclick="switching()">スタート</button>
+        </div>
+    </div>
 	<!-- JavaScript -->
 	<script src="//cdn.jsdelivr.net/npm/axios@0.21.1/dist/axios.min.js"></script>
 	<script src="//code.jquery.com/jquery-3.6.1.min.js"></script>
