@@ -1,0 +1,14 @@
+body{
+    background-color: orange;
+}
+#clock{
+    background-color: white;
+}
+#clock #days{
+    font-size: 200%;
+    text-align: center;
+}
+#clock #times{
+    font-size: 400%;
+    text-align: center;
+}
