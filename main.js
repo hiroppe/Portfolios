@@ -1,50 +1,39 @@
-console.log("main.js!!");
+// 計算処理
+let calc = () => {
+    let excluded_num = $('#number').val();
+    if(excluded_num < 1 && $('#number').val("")){
+        $('input').prop('disabled',true);
+        $('button').prop('disabled',true);
+        let elem = '<div class="alert alert-warning alert-dismissible fade show" role="alert">';
+        elem += '<p>正しい数値を入力してください。</p>';
+        elem += '<button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="close" onclick="lift()"></button>';
+        elem += '</div>';
+        $("#header").append(elem);
+    }
+    let included_num;
+    if($('input:radio[name="select"]:checked').val() === "８％"){
+        included_num = Math.floor(excluded_num * 1.08);
+    }
+    else if($('input:radio[name="select"]:checked').val() === "１０％"){
+        included_num = Math.floor(excluded_num * 1.1);
+    }
+    let consumption_num = included_num - excluded_num;
+    $("#excluded").text(excluded_num);
+    $("#consumption").text(consumption_num);
+    $('#included').text(included_num);
+};
 
-$(document).ready(() => {
-    const option = {responseType: "blob"};
-    axios.get("./data.json", option).then(res=>{
-	    res.data.text().then(str=>{
-			let arr = JSON.parse(str);
+// 削除処理
+let del = () => {
+    $('#number').val("");
+    $("#excluded").text("");
+    $("#consumption").text("");
+    $('#included').text("");
+};
 
-            // ・1924年〜1974年のデータを取得
-            arr.dataList1.forEach((obj) => {
-                let element = '<tr>';
-                element += `<th scope="row">` + obj.ad + `</th>`;
-                if(Array.isArray(obj.jc)){
-                    element += `<td>`;
-                    element += `<p>` + obj.jc[0] + `</p>`;
-                    element += `<p>` + obj.jc[1] + `</p>`;
-                    element += `</td>`;
-                }
-                else{
-                    element += `<td>` + obj.jc + `</td>`;
-                }
-                element += `<td>` + obj.age + "歳" + `</td>`;
-                element += `<td>` + obj.zoidac + `</td>`;
-                element += `</tr>`;
-                $('#one').append(element);
-            });
-
-            // ・1975年〜2023年のデータを取得
-            arr.dataList2.forEach((obj) => {
-                let element = '<tr>';
-                element += `<th scope="row">` + obj.ad + `</th>`;
-                if(Array.isArray(obj.jc)){
-                    element += `<td>`;
-                    element += `<p>` + obj.jc[0] + `</p>`;
-                    element += `<p>` + obj.jc[1] + `</p>`;
-                    element += `</td>`;
-                }
-                else{
-                    element += `<td>` + obj.jc + `</td>`;
-                }
-                element += `<td>` + obj.age + "歳" + `</td>`;
-                element += `<td>` + obj.zoidac + `</td>`;
-                element += `</tr>`;
-                $('#two').append(element);
-            });
-        });
-    }).catch(err=>{
-	    console.log("表示できません。");
-    });
-})
+//アラートを削除したときの処理
+let lift = () => {
+    $('input').prop('disabled',false);
+    $('button').prop('disabled',false);
+    del();
+};

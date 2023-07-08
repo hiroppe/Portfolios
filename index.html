@@ -4,7 +4,7 @@
 	<meta charset="UTF-8"/>
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<link rel="shortcut icon" href="./images/favicon.ico">
-	<title>干支早見表</title>
+	<title>消費税の計算電卓</title>
 	<!-- CSS -->
 	<link rel="stylesheet" href="./libs/bootstrap/bootstrap.min.css">
 	<link rel="stylesheet" href="./libs/bootstrap/carousel.css">
@@ -13,61 +13,49 @@
 </head>
 <body>
 	<!-- Main(Start) -->
+	<header id="header"></header>
 	<main>
-		<div class="container">
-			<h1 class="text-center">干支早見表</h1>
+		<div class="container text-center">
+			<h1>消費税の計算電卓</h1>
+		</div>
+		<div class="container mt-5 text-center">
 			<div class="row">
-				<div class="col-sm-6">
-					<p class="text-center">1924年〜1974年</p>
-					<table class="table text-center">
-						<thead class="table-dark">
-							<tr>
-								<th scope="col">西暦</th>
-								<th scope="col">和暦</th>
-								<th scope="col">年齢</th>
-								<th scope="col">干支</th>
-							</tr>
-						</thead>
-						<tbody id="one"></tbody>
-					</table>
+				<p>税抜き価格を入力してください。</p>
+				<span><input type="text" class=”form-control” id="number" style="text-align: right;" placeholder="半角数字で入力">円</span>
+			</div>
+			<div class="row mt-3">
+				<div class="col align-self-center">
+					<span>消費税率</span>
+					<label><input type="radio" name="select" value="８％" checked>８％</label>
+					<label><input type="radio" name="select" value="１０％">１０％</label>
 				</div>
-				<div class="col-sm-6">
-					<p class="text-center">1975年〜2023年</p>
-					<table class="table text-center">
-						<thead  class="table-dark">
-							<tr>
-								<th scope="col">西暦</th>
-								<th scope="col">和暦</th>
-								<th scope="col">年齢</th>
-								<th scope="col">干支</th>
-							</tr>
-						</thead>
-						<tbody id="two"></tbody>
-					</table>
+			</div>
+			<div class="row mt-3">
+				<div class="col align-self-center">
+					<button class="btn btn-danger" type="button" onclick="calc()">計算する</button>
+					<button class="btn btn-dark" type="button" onclick="del()">消す</button>
+				</div>
+			</div>
+		</div>
+		<div class="container mt-5 text-center">
+			<div class="row">
+				<div class="col-sm-4">
+					<h3>税抜価格：<span id="excluded"></span>円</h3>
+				</div>
+				<div class="col-sm-4">
+					<h3>消費税：<span id="consumption"></span>円</h3>
+				</div>
+				<div class="col-sm-4">
+					<h3>税込価格：<span id="included"></span>円</h3>
 				</div>
 			</div>
 		</div>
 	</main>
 	<!-- Main(End) -->
 
-	<!-- Footer(Start) -->
-	<footer>
-		<div class="container text-muted py-5">
-			<p class="float-end mb-1"><a href="#">Back to top</a></p>
-			<p class="mb-1">&copy; Bootstrap</p>
-			<p class="mb-0">
-				<a href="https://getbootstrap.jp" target="_blank">Bootstap公式サイト</a>や
-				<a href="https://getbootstrap.jp/docs/5.0/getting-started/introduction/" target="_blank">スタートガイド</a>、
-				<a href="https://icons.getbootstrap.com/" target="_blank">アイコン</a>を活用しましょう。
-			</p>
-		</div>
-	</footer>
-	<!-- Footer(End) -->
-
 	<!-- JavaScript -->
 	<script src="./libs/jquery/jquery-3.6.1.min.js"></script>
 	<script src="./libs/bootstrap/bootstrap.min.js"></script>
-	<script src="https://cdn.jsdelivr.net/npm/axios@0.21.1/dist/axios.min.js"></script>
 	<script src="./main.js"></script>
 </body>
 </html>
