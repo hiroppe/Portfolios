@@ -1,7 +1,8 @@
 // 計算処理
 let calc = () => {
-    let excluded_num = $('#number').val();
-    if(excluded_num < 1 && $('#number').val("")){
+    let height_num = $("#height").val() / 100;
+    let weight_num = $("#weight").val();
+    if((height_num < 1 && $('#height').val("")) || (weight_num < 1 && $('#weight').val(""))){
         $('input').prop('disabled',true);
         $('button').prop('disabled',true);
         let elem = '<div class="alert alert-warning alert-dismissible fade show" role="alert">';
@@ -10,25 +11,37 @@ let calc = () => {
         elem += '</div>';
         $("#header").append(elem);
     }
-    let included_num;
-    if($('input:radio[name="select"]:checked').val() === "８％"){
-        included_num = Math.floor(excluded_num * 1.08);
+    let bmi_num = Math.round(weight_num / (height_num ** 2) * 10) / 10;
+    $('#bmi').text(bmi_num);
+    if(bmi_num < 18.5){
+        $('#judgement').text('痩せ');
     }
-    else if($('input:radio[name="select"]:checked').val() === "１０％"){
-        included_num = Math.floor(excluded_num * 1.1);
+    else if(bmi_num < 25){
+        $('#judgement').text('普通');
     }
-    let consumption_num = included_num - excluded_num;
-    $("#excluded").text(excluded_num);
-    $("#consumption").text(consumption_num);
-    $('#included').text(included_num);
+    else if(bmi_num < 30){
+        $('#judgement').text('肥満１度');
+    }
+    else if(bmi_num < 35){
+        $('#judgement').text('肥満２度');
+    }
+    else if(bmi_num < 40){
+        $('#judgement').text('肥満３度');
+    }
+    else if(bmi_num >= 40){
+        $('#judgement').text('肥満４度');
+    }
+    else{
+        $('#judgement').text('判定できません');
+    }
 };
 
 // 削除処理
 let del = () => {
-    $('#number').val("");
-    $("#excluded").text("");
-    $("#consumption").text("");
-    $('#included').text("");
+    $('#height').val("");
+    $('#weight').val("");
+    $('#bmi').text("");
+    $('#judgement').text('');
 };
 
 //アラートを削除したときの処理

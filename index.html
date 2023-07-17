@@ -4,7 +4,7 @@
 	<meta charset="UTF-8"/>
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<link rel="shortcut icon" href="./images/favicon.ico">
-	<title>消費税の計算電卓</title>
+	<title>BMIの計算</title>
 	<!-- CSS -->
 	<link rel="stylesheet" href="./libs/bootstrap/bootstrap.min.css">
 	<link rel="stylesheet" href="./libs/bootstrap/carousel.css">
@@ -16,19 +16,15 @@
 	<header id="header"></header>
 	<main>
 		<div class="container text-center">
-			<h1>消費税の計算電卓</h1>
+			<h1>BMIの計算</h1>
 		</div>
 		<div class="container mt-5 text-center">
 			<div class="row">
-				<p>税抜き価格を入力してください。</p>
-				<span><input type="text" class=”form-control” id="number" style="text-align: right;" placeholder="半角数字で入力">円</span>
+				<p>身長と体重を入力してください。</p>
+				<label>身長：<input type="text" class=”form-control” id="height" style="text-align: right;" placeholder="半角数字で入力">cm</label>
 			</div>
-			<div class="row mt-3">
-				<div class="col align-self-center">
-					<span>消費税率</span>
-					<label><input type="radio" name="select" value="８％" checked>８％</label>
-					<label><input type="radio" name="select" value="１０％">１０％</label>
-				</div>
+			<div class="row pt-3">
+				<label>体重：<input type="text" class=”form-control” id="weight" style="text-align: right;" placeholder="半角数字で入力">kg</label>
 			</div>
 			<div class="row mt-3">
 				<div class="col align-self-center">
@@ -39,14 +35,11 @@
 		</div>
 		<div class="container mt-5 text-center">
 			<div class="row">
-				<div class="col-sm-4">
-					<h3>税抜価格：<span id="excluded"></span>円</h3>
+				<div class="col-sm-6">
+					<h3>BMI：<span id="bmi"></span></h3>
 				</div>
-				<div class="col-sm-4">
-					<h3>消費税：<span id="consumption"></span>円</h3>
-				</div>
-				<div class="col-sm-4">
-					<h3>税込価格：<span id="included"></span>円</h3>
+				<div class="col-sm-6">
+					<h3>判定：<span id="judgement"></span></h3>
 				</div>
 			</div>
 		</div>
