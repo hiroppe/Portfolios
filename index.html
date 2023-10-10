@@ -4,7 +4,7 @@
 	<meta charset="UTF-8"/>
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<link rel="shortcut icon" href="./images/favicon.ico">
-	<title>BMIの計算</title>
+	<title>Hiroto's Portfolio</title>
 	<!-- CSS -->
 	<link rel="stylesheet" href="./libs/bootstrap/bootstrap.min.css">
 	<link rel="stylesheet" href="./libs/bootstrap/carousel.css">
@@ -12,39 +12,256 @@
 	<link rel="stylesheet" href="./css/custom.css">
 </head>
 <body>
+	
+	<!-- Header(Start) -->
+	<header>
+		<nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+			<div class="container-fluid">
+				<a class="navbar-brand" href="#">
+					<img src="./images/logo.png">Hiroto's Portfolio
+				</a>
+			</div>
+		</nav>
+	</header>
+	<!-- Header(End) -->
+
 	<!-- Main(Start) -->
-	<header id="header"></header>
 	<main>
-		<div class="container text-center">
-			<h1>BMIの計算</h1>
+		<div>
+			<div id="myCarousel" class="carousel slide" data-bs-ride="carousel">
+				<div class="carousel-inner">
+					<div class="carousel-item active">
+						<img class="d-block w-100" alt="First slide" src="images/3969.jpeg">
+					</div>
+					<div class="carousel-item">
+						<img class="d-block w-100" alt="Second slide" src="images/3990.jpeg">
+					</div>
+					<div class="carousel-item">
+						<img class="d-block w-100" alt="Third slide" src="images/IMG_0232.JPG">
+					</div>
+					<div class="carousel-caption d-none d-md-block">
+						<h1>Hiroto's Portfolio</h1>
+					</div>
+				</div>
+				<nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+					<ul class="nav justify-content-center">
+						<li class="nav-item"><a class="nav-link" href="#profile"><h3>プロフィールへ↓</h3></a></li>
+						<li class="nav-item"><a class="nav-link"><h3>鉄道作品関連へ↓</h3></a></li>
+						<li class="nav-item"><a class="nav-link"><h3>Webアプリケーション作品関連へ↓</h3></a></li>
+						<li class="nav-item"><a class="nav-link"><h3>OpenProcessing作品へ↓</h3></a></li>
+					</ul>
+				</nav>
+			</div>
 		</div>
-		<div class="container mt-5 text-center">
+		<div class="container m-5"></div>
+		<div class="container" id="profile">
+			<div class="row mb-5 text-center">
+				<h1>はじめに</h1>
+				<h4 class="pt-3">
+					この度は当サイトを開いてくださりありがとうございます。<br>
+					私は日本総合ビジネス専門学校 情報メディア学科 情報技術コース２年 増田大翔と申します。
+					当サイトでは私が１年生の時に初めてプログラミング(HTML・CSS・JavaScript)を学び、それを元に活用し作成した作品集です。
+					一生懸命作成したので是非ご覧ください。どうぞよろしくお願いいたします。
+				</h4>
+			</div>
 			<div class="row">
-				<p>身長と体重を入力してください。</p>
-				<label>身長：<input type="text" class=”form-control” id="height" style="text-align: right;" placeholder="半角数字で入力">cm</label>
-			</div>
-			<div class="row pt-3">
-				<label>体重：<input type="text" class=”form-control” id="weight" style="text-align: right;" placeholder="半角数字で入力">kg</label>
-			</div>
-			<div class="row mt-3">
-				<div class="col align-self-center">
-					<button class="btn btn-danger" type="button" onclick="calc()">計算する</button>
-					<button class="btn btn-dark" type="button" onclick="del()">消す</button>
+				<h1 class="text-center">プロフィール</h1>
+				<div class="col mt-3 text-center">
+					<div id="head-logo"></div>
+					<a href="https://gist.github.com/hiroppe" target="_blank" class="btn btn-dark">GitHubアカウントへ</a>
+				</div>
+				<div class="col-sm-8 mt-3">
+					<ul>
+						<h3><li><spam>名前：</spam>増田大翔</li></h3>
+						<h3><li><spam>出身：</spam>岐阜県揖斐郡池田町</li></h3>
+						<h3><li><spam>趣味：</spam>鉄道好き(特に撮り鉄)</li></h3>
+						<h3><li><spam>資格：</spam>MOS(Word・Excel)、Webクリエイター能力認定試験</li></h3>
+					</ul>
 				</div>
 			</div>
 		</div>
-		<div class="container mt-5 text-center">
+		<div class="container border m-5"></div>
+		<div class="row text-center">
+			<h1>鉄道関係作品</h1>
+		</div>
+		<div class="container-fluid p-5 bg-warning">
 			<div class="row">
-				<div class="col-sm-6">
-					<h3>BMI：<span id="bmi"></span></h3>
+				<div class="col-sm-4">
+					<div class="card" style="max-width: 27rem;">
+						<img class="card-img-top" src="images/a.png">
+						<div class="card-body">
+							<div class="row text-center">
+								<h5>東海道・山陽・九州新幹線停車駅ご案内</h5>
+							</div>
+							<div class="row">
+								<div class="col">
+									<a href="portfolio_railroad1/index.html" target="_blank" class="btn btn-primary">開く(本作品ページへ)</a>
+									<a href="https://gist.github.com/hiroppe/68bbfa5f593dbdcdf6f8c21f76cd7995" target="_blank"
+									 class="btn btn-dark">ソースコード(GitHubへ)</a>
+								</div>
+							</div>
+							
+						</div>
+					</div>
 				</div>
-				<div class="col-sm-6">
-					<h3>判定：<span id="judgement"></span></h3>
+				<div class="col-sm-4">
+					<div class="card" style="max-width: 27rem;">
+						<img class="card-img-top" src="images/b.png">
+						<div class="card-body">
+							<div class="row text-center">
+								<h5>北陸新幹線停車駅ご案内</h5>
+							</div>
+							<div class="row">
+								<div class="col">
+									<a href="portfolio_railroad2/index.html" target="_blank" class="btn btn-primary">開く(本作品ページへ)</a>
+									<a href="https://gist.github.com/hiroppe/b4f58c3fccbb8b78d68a816398229d67" target="_blank"
+									 class="btn btn-dark">ソースコード(GitHubへ)</a>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+				<div class="col-sm-4">
+					<div class="card" style="max-width: 27rem;">
+						<img class="card-img-top" src="images/c.png">
+						<div class="card-body">
+							<div class="row text-center">
+								<h5>九州新幹線クイズ</h5>
+							</div>
+							<div class="row">
+								<div class="col">
+									<a href="portfolio_railroad3/index.html" target="_blank" class="btn btn-primary">開く(本作品ページへ)</a>
+									<a href="https://gist.github.com/hiroppe/05f394a1241f7ab326e3e48bd7cb7768" target="_blank"
+									 class="btn btn-dark">ソースコード(GitHubへ)</a>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div> 
+		<div class="row text-center mt-5 pt-5">
+			<h1>Webアプリケーション関係作品</h1>
+		</div>
+		<div class="container-fluid p-5 bg-success">
+			<div class="row">
+				<div class="col-sm-4">
+					<div class="card" style="max-width: 27rem;">
+						<img class="card-img-top" src="./images/d.png">
+						<div class="card-body">
+							<div class="row text-center">
+								<h5>割り勘アプリ</h5>
+							</div>
+							<div class="row">
+								<div class="col">
+									<a href="portfolio_app1/index.html" target="_blank" class="btn btn-primary">開く(本作品ページへ)</a>
+									<a href="https://gist.github.com/hiroppe/78a3ceb3ca16522c17c7c09126401ab1" target="_blank"
+									 class="btn btn-dark">ソースコード(GitHubへ)</a>
+								</div>
+							</div>
+							
+						</div>
+					</div>
+				</div>
+				<div class="col-sm-4">
+					<div class="card" style="max-width: 27rem;">
+						<img class="card-img-top" src="./images/e.png">
+						<div class="card-body">
+							<div class="row text-center">
+								<h5>天気アプリ</h5>
+							</div>
+							<div class="row">
+								<div class="col">
+									<a href="portfolio_app2/index.html" target="_blank" class="btn btn-primary">開く(本作品ページへ)</a>
+									<a href="https://gist.github.com/hiroppe/93267a8f6a7bc23d416e5fe50b2d2242" target="_blank"
+									 class="btn btn-dark">ソースコード(GitHubへ)</a>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+				<div class="col-sm-4">
+					<div class="card" style="max-width: 27rem;">
+						<img class="card-img-top" src="./images/f.png">
+						<div class="card-body">
+							<div class="row text-center">
+								<h5>時計付き時計</h5>
+							</div>
+							<div class="row">
+								<div class="col">
+									<a href="portfolio_app3/index.html" target="_blank" class="btn btn-primary">開く(本作品ページへ)</a>
+									<a href="https://gist.github.com/hiroppe/ca95331f85ea4dc212917d7cc57cf9f1" target="_blank"
+									 class="btn btn-dark">ソースコード(GitHubへ)</a>
+								</div>
+							</div>
+						</div>
+					</div>
 				</div>
 			</div>
 		</div>
+		<div class="row text-center mt-5 pt-5">
+			<h1>OpenProcessing作品</h1>
+		</div>
+		<div class="container-fluid p-5 bg-danger">
+			<div class="row">
+				<div class="col-sm-4">
+					<div class="card" style="max-width: 27rem;">
+						<img class="card-img-top" src="./images/design1.png">
+						<div class="card-body">
+							<div class="row text-center">
+								<h5>作品１</h5>
+							</div>
+							<div class="row text-center">
+								<div class="col">
+									<a href="https://openprocessing.org/sketch/2029481" target="_blank" class="btn btn-primary">開く(本作品ページへ)</a>
+								</div>
+							</div>
+							
+						</div>
+					</div>
+				</div>
+				<div class="col-sm-4">
+					<div class="card" style="max-width: 27rem;">
+						<img class="card-img-top" src="./images/design2.png">
+						<div class="card-body">
+							<div class="row text-center">
+								<h5>作品２</h5>
+							</div>
+							<div class="row text-center">
+								<div class="col">
+									<a href="https://openprocessing.org/sketch/1967030" target="_blank" class="btn btn-primary">開く(本作品ページへ)</a>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+				<div class="col-sm-4">
+					<div class="card" style="max-width: 27rem;">
+						<img class="card-img-top" src="./images/design3.png">
+						<div class="card-body">
+							<div class="row text-center">
+								<h5>作品３</h5>
+							</div>
+							<div class="row text-center">
+								<div class="col">
+									<a href="https://openprocessing.org/sketch/1963252" target="_blank" class="btn btn-primary">開く(本作品ページへ)</a>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>  
 	</main>
 	<!-- Main(End) -->
+
+	<!-- Footer(Start) -->
+	<footer>
+		<div class="container text-muted py-5">
+			<p class="float-end mb-1"><a href="#">Back to top</a></p>
+		</div>
+	</footer>
+	<!-- Footer(End) -->
 
 	<!-- JavaScript -->
 	<script src="./libs/jquery/jquery-3.6.1.min.js"></script>
