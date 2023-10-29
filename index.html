@@ -1,0 +1,373 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+	<meta charset="UTF-8"/>
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<link rel="shortcut icon" href="./images/favicon.ico">
+	<title>Hiroto's Site〜ポートフォリオ〜</title>
+	<!-- CSS -->
+	<link rel="stylesheet" href="./libs/bootstrap/bootstrap.min.css">
+	<link rel="stylesheet" href="./libs/bootstrap/carousel.css">
+	<link rel="stylesheet" href="//cdn.jsdelivr.net/npm/bootstrap-icons@1.8.0/font/bootstrap-icons.css">
+	<link rel="stylesheet" href="./css/custom.css">
+</head>
+<body>
+	
+	<!-- Header(Start) -->
+	<header>
+		<nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+			<div class="container-fluid">
+				<a class="navbar-brand" href="#">
+					<img src="./images/logo.png">Hiroto's Site〜ポートフォリオ〜
+				</a>
+				<a href="鉄道写真集/index.html" target="_blank" class="btn btn-light">鉄道写真集へ</a>
+			</div>
+		</nav>
+	</header>
+	<!-- Header(End) -->
+
+	<!-- Main(Start) -->
+	<main>
+		<div id="myCarousel" class="carousel slide" data-bs-ride="carousel">
+			<div class="carousel-inner">
+				<div class="carousel-item active">
+					<img class="d-block w-100" alt="First slide" src="images/3969.jpeg">
+				</div>
+				<div class="carousel-item">
+					<img class="d-block w-100" alt="Second slide" src="images/3990.jpeg">
+				</div>
+				<div class="carousel-item">
+					<img class="d-block w-100" alt="Third slide" src="images/IMG_0232.JPG">
+				</div>
+				<div class="carousel-caption d-none d-md-block">
+					<h1>Hiroto's Site</h1>
+				</div>
+			</div>
+			<h1 class="text-center">ようこそ</h1>
+			<nav class="navbar navbar-expand-lg navbar-dark bg-light justify-content-center">
+				<ul class="nav justify-content-center">
+					<li class="nav-item"><a class="btn btn-dark" href="#profile" ><h3>プロフィールへ↓</h3></a></li>
+					<li class="nav-item"><a class="btn btn-warning" href="#railroad"><h3>鉄道作品関連へ↓</h3></a></li>
+					<li class="nav-item"><a class="btn btn-success" href="#webApp"><h3>Webアプリケーション作品関連へ↓</h3></a></li>
+					<li class="nav-item"><a class="btn btn-danger" href="#openProcessing"><h3>OpenProcessing作品へ↓</h3></a></li>
+				</ul>
+			</nav>
+		</div>
+		<div class="container m-5"></div>
+		<div class="container" id="profile">
+			<div class="row mb-5 text-center">
+				<h1>はじめに</h1>
+				<h4 class="pt-3">
+					この度は当サイトを開いてくださりありがとうございます。<br>
+					私は日本総合ビジネス専門学校 情報メディア学科 情報技術コース２年 増田大翔と申します。
+					当サイトでは私が１年生の時に初めてプログラミング(HTML・CSS・JavaScript)を学び、それを元に活用し作成した作品集です。
+					一生懸命作成したので是非ご覧ください。どうぞよろしくお願いいたします。
+				</h4>
+			</div>
+			<div class="row">
+				<h1 class="text-center">プロフィール</h1>
+				<div class="col mt-3 text-center">
+					<div id="head-logo"></div>
+				</div>
+				<div class="col-sm-8 mt-3">
+					<ul>
+						<h3><li><spam>名前：</spam>増田大翔</li></h3>
+						<h3><li><spam>出身：</spam>岐阜県</li></h3>
+						<h3><li><spam>趣味：</spam>鉄道好き(特に撮り鉄)</li></h3>
+						<h3><li><spam>資格：</spam>MOS(Word・Excel)、Webクリエイター能力認定試験</li></h3>
+					</ul>
+				</div>
+			</div>
+		</div>
+		<div class="container border m-5"></div>
+		<div class="row text-center" id="railroad">
+			<h1>鉄道関係作品</h1>
+		</div>
+		<div class="container-fluid p-5 bg-warning">
+			<div class="row">
+				<div class="col-sm-4">
+					<div class="card" style="max-width: 27rem;">
+						<img class="card-img-top" src="images/a.png">
+						<div class="card-body">
+							<div class="row text-center">
+								<h5>東海道・山陽・九州新幹線停車駅ご案内</h5>
+							</div>
+							<div class="row">
+								<div class="col">
+									<a href="portfolio_railroad1/index.html" target="_blank" class="btn btn-primary">開く(本作品ページへ)</a>
+									<a href="https://gist.github.com/hiroppe/68bbfa5f593dbdcdf6f8c21f76cd7995" target="_blank"
+									 class="btn btn-dark">ソースコード(GitHubへ)</a>
+								</div>
+							</div>
+							<div class="row">
+								<div class="accordion" id="accordion">
+									<div class="accordion-item">
+										<div class="accordion-header" id="headingOne">
+											<h5 class="mb-0">
+												<button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne"
+												 aria-expanded="true" aria-controls="collapseOne">作品の説明</button>
+											</h5>
+										</div>
+										<div id="collapseOne" class="accordion-collapse collapse" aria-labelledby="headingOne" data-bs-parent="#accordion">
+											<div class="accordion-body">
+												この作品はjavascriptを取得して最初に作成した作品です。私は鉄道が好きなのでちょっとした停車駅案内を作ってみました。関数を駆使して作成
+												しました。東京〜鹿児島中央間は駅数がかなり多かったのでとても大変でした。
+											</div>
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+				<div class="col-sm-4">
+					<div class="card" style="max-width: 27rem;">
+						<img class="card-img-top" src="images/b.png">
+						<div class="card-body">
+							<div class="row text-center">
+								<h5>北陸新幹線停車駅ご案内</h5>
+							</div>
+							<div class="row">
+								<div class="col">
+									<a href="portfolio_railroad2/index.html" target="_blank" class="btn btn-primary">開く(本作品ページへ)</a>
+									<a href="https://gist.github.com/hiroppe/b4f58c3fccbb8b78d68a816398229d67" target="_blank"
+									 class="btn btn-dark">ソースコード(GitHubへ)</a>
+								</div>
+							</div>
+							<div class="row">
+								<div class="accordion" id="accordion2">
+									<div class="accordion-item">
+										<div class="accordion-header" id="headingTwo">
+											<h5 class="mb-0">
+												<button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseTwo"
+												 aria-expanded="false" aria-controls="collapseTwo">作品の説明</button>
+											</h5>
+										</div>
+										<div id="collapseTwo" class="accordion-collapse collapse" aria-labelledby="headingTwo" data-bs-parent="#accordion2">
+											<div class="accordion-body">
+												鉄道シリーズ第２弾として作成しました。第１弾の作品とは変わりませんがjQueryを取得したのでそれを駆使して作成しました。会社の境界
+												(JR東日本とJR西日本)があったので種別に色を装飾しました。またこれから新大阪駅まで延伸予定なのでダイヤや駅が分かり次第また更新していきたいと思います。
+											</div>
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+				<div class="col-sm-4">
+					<div class="card" style="max-width: 27rem;">
+						<img class="card-img-top" src="images/c.png">
+						<div class="card-body">
+							<div class="row text-center">
+								<h5>九州新幹線クイズ</h5>
+							</div>
+							<div class="row">
+								<div class="col">
+									<a href="portfolio_railroad3/index.html" target="_blank" class="btn btn-primary">開く(本作品ページへ)</a>
+									<a href="https://gist.github.com/hiroppe/05f394a1241f7ab326e3e48bd7cb7768" target="_blank"
+									 class="btn btn-dark">ソースコード(GitHubへ)</a>
+								</div>
+							</div>
+							<div class="row">
+								<div class="accordion" id="accordion3">
+									<div class="accordion-item">
+										<div class="accordion-header" id="headingThree">
+											<h5 class="mb-0">
+												<button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseThree"
+												 aria-expanded="false" aria-controls="collapseThree">作品の説明</button>
+											</h5>
+										</div>
+										<div id="collapseThree" class="accordion-collapse collapse" aria-labelledby="headingThree" data-bs-parent="#accordion3">
+											<div class="accordion-body">
+												鉄道シリーズ第３弾として作成しました。この作品は西九州新幹線が開業したのでその記念に作成しました。1年生で習得したスキルを最大限に活かした作品です。
+												クイズ形式にすることで鉄道が好きではない人でも分かりやすいように工夫しました。
+											</div>
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div> 
+		<div class="row text-center mt-5 pt-5" id="webApp">
+			<h1>Webアプリケーション関係作品</h1>
+		</div>
+		<div class="container-fluid p-5 bg-success">
+			<div class="row">
+				<div class="col-sm-4">
+					<div class="card" style="max-width: 27rem;">
+						<img class="card-img-top" src="./images/d.png">
+						<div class="card-body">
+							<div class="row text-center">
+								<h5>割り勘アプリ</h5>
+							</div>
+							<div class="row">
+								<div class="col">
+									<a href="portfolio_app1/index.html" target="_blank" class="btn btn-primary">開く(本作品ページへ)</a>
+									<a href="https://gist.github.com/hiroppe/78a3ceb3ca16522c17c7c09126401ab1" target="_blank"
+									 class="btn btn-dark">ソースコード(GitHubへ)</a>
+								</div>
+							</div>
+							<div class="row">
+								<div class="accordion" id="accordion4">
+									<div class="accordion-item">
+										<div class="accordion-header" id="headingFour">
+											<h5 class="mb-0">
+												<button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseFour"
+												 aria-expanded="true" aria-controls="collapseOne">作品の説明</button>
+											</h5>
+										</div>
+										<div id="collapseFour" class="accordion-collapse collapse" aria-labelledby="headingFour" data-bs-parent="#accordion4">
+											<div class="accordion-body">
+												JavaScriptを使ってプログラムを実装する時に、一つ一つのボタンに関数を使ってそれぞれの役割を分かりやすくしました。
+											</div>
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+				<div class="col-sm-4">
+					<div class="card" style="max-width: 27rem;">
+						<img class="card-img-top" src="./images/e.png">
+						<div class="card-body">
+							<div class="row text-center">
+								<h5>天気アプリ</h5>
+							</div>
+							<div class="row">
+								<div class="col">
+									<a href="portfolio_app2/index.html" target="_blank" class="btn btn-primary">開く(本作品ページへ)</a>
+									<a href="https://gist.github.com/hiroppe/93267a8f6a7bc23d416e5fe50b2d2242" target="_blank"
+									 class="btn btn-dark">ソースコード(GitHubへ)</a>
+								</div>
+							</div>
+							<div class="row">
+								<div class="accordion" id="accordion5">
+									<div class="accordion-item">
+										<div class="accordion-header" id="headingFive">
+											<h5 class="mb-0">
+												<button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseFive"
+												 aria-expanded="false" aria-controls="collapseTwo">作品の説明</button>
+											</h5>
+										</div>
+										<div id="collapseFive" class="accordion-collapse collapse" aria-labelledby="headingFive" data-bs-parent="#accordion5">
+											<div class="accordion-body">
+												JavaScriptにあるjsonファイルを取得したので作成しました。天気アプリということで気象庁のAPIを使用しました。
+											</div>
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+				<div class="col-sm-4">
+					<div class="card" style="max-width: 27rem;">
+						<img class="card-img-top" src="./images/f.png">
+						<div class="card-body">
+							<div class="row text-center">
+								<h5>時計付き時計</h5>
+							</div>
+							<div class="row">
+								<div class="col">
+									<a href="portfolio_app3/index.html" target="_blank" class="btn btn-primary">開く(本作品ページへ)</a>
+									<a href="https://gist.github.com/hiroppe/ca95331f85ea4dc212917d7cc57cf9f1" target="_blank"
+									 class="btn btn-dark">ソースコード(GitHubへ)</a>
+								</div>
+							</div>
+							<div class="row">
+								<div class="accordion" id="accordion6">
+									<div class="accordion-item">
+										<div class="accordion-header" id="headingSix">
+											<h5 class="mb-0">
+												<button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseSix"
+												 aria-expanded="false" aria-controls="collapseThree">作品の説明</button>
+											</h5>
+										</div>
+										<div id="collapseSix" class="accordion-collapse collapse" aria-labelledby="headingSix" data-bs-parent="#accordion6">
+											<div class="accordion-body">
+												JavaScriptのライブラリであるhowler.jsを学んだので作成しました。
+											</div>
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div class="row text-center mt-5 pt-5" id="openProcessing">
+			<h1>OpenProcessing作品(おまけ)</h1>
+		</div>
+		<div class="container-fluid p-5 bg-danger">
+			<div class="row">
+				<div class="col-sm-4">
+					<div class="card" style="max-width: 27rem;">
+						<img class="card-img-top" src="./images/design1.png">
+						<div class="card-body">
+							<div class="row text-center">
+								<h5>作品１</h5>
+							</div>
+							<div class="row text-center">
+								<div class="col">
+									<a href="https://openprocessing.org/sketch/2029481" target="_blank" class="btn btn-primary">開く(本作品ページへ)</a>
+								</div>
+							</div>
+							
+						</div>
+					</div>
+				</div>
+				<div class="col-sm-4">
+					<div class="card" style="max-width: 27rem;">
+						<img class="card-img-top" src="./images/design2.png">
+						<div class="card-body">
+							<div class="row text-center">
+								<h5>作品２</h5>
+							</div>
+							<div class="row text-center">
+								<div class="col">
+									<a href="https://openprocessing.org/sketch/1967030" target="_blank" class="btn btn-primary">開く(本作品ページへ)</a>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+				<div class="col-sm-4">
+					<div class="card" style="max-width: 27rem;">
+						<img class="card-img-top" src="./images/design3.png">
+						<div class="card-body">
+							<div class="row text-center">
+								<h5>作品３</h5>
+							</div>
+							<div class="row text-center">
+								<div class="col">
+									<a href="https://openprocessing.org/sketch/1963252" target="_blank" class="btn btn-primary">開く(本作品ページへ)</a>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>  
+	</main>
+	<!-- Main(End) -->
+
+	<!-- Footer(Start) -->
+	<footer>
+		<div class="container text-muted py-5">
+			<p class="float-end mb-1"><a href="#">Back to top</a></p>
+		</div>
+	</footer>
+	<!-- Footer(End) -->
+
+	<!-- JavaScript -->
+	<script src="./libs/jquery/jquery-3.6.1.min.js"></script>
+	<script src="./libs/bootstrap/bootstrap.min.js"></script>
+	<script src="./main.js"></script>
+</body>
+</html>
