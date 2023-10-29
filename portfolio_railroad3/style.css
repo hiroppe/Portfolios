@@ -1,0 +1,38 @@
+#container{
+	margin: 0 auto 0 auto;
+	width: 1000px;
+}
+#container header{
+    padding: 2px 3px 2px 3px;
+    text-align: center;
+    background-color: red;
+    color: #fff;
+}
+#container .problem img{
+    width: 450px;
+    height: 300px;
+    padding-left: 270px;
+}
+#container .button{
+    text-align: center;
+    margin: 0 100px 0 100px;
+    background-color: red;
+    padding: 10px 0 10px 0;
+}
+#container .button .one,.two,.three,.four{
+    width: 150px;
+    height: 50px;
+    font-size: 120%;
+}
+#container .btntxt{
+    margin-top: 20px;
+    display: flex;
+    justify-content: space-around;
+}
+#container .btntxt .next{
+    width: 150px;
+    height: 50px;
+    font-size: 120%;
+    background-color: red;
+    color: #fff;
+}
