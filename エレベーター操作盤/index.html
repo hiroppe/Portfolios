@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+	<meta charset="UTF-8"/>
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<link rel="shortcut icon" href="./images/favicon.ico">
+	<title>エレベーター操作盤</title>
+	<!-- CSS -->
+	<link rel="stylesheet" href="./libs/bootstrap/bootstrap.min.css">
+	<link rel="stylesheet" href="./libs/bootstrap/carousel.css">
+	<link rel="stylesheet" href="//cdn.jsdelivr.net/npm/bootstrap-icons@1.8.0/font/bootstrap-icons.css">
+	<link rel="stylesheet" href="./css/custom.css">
+</head>
+<body>
+	<!-- Main(Start) -->
+	<header id="header"></header>
+	<main>
+		<div class="container text-center">
+			<h1>エレベーター操作盤</h1>
+		</div>
+		<div class="container">
+			<div class="row justify-content-center">
+				<div class="col-auto">
+					<div class="card" style="width: 200px; height: 600px;">
+						<div class="card-header">
+							<div class="row">
+								<div class="col">
+									<input type="text" class="form-control" id="display1" readonly style="height: 50px;">
+								</div>
+								<div class="col">
+									<input type="text" class="form-control" id="display2" readonly style="height: 50px;">
+								</div>
+							</div>
+							<div class="row mt-1">
+								<input type="text" class="form-control" id="display3" readonly>
+							</div>
+						</div>
+						<div class="card-body">
+							<div class="row">
+								<button type="button" class="btn btn-warning" onclick="emergency()">☎︎非常ボタン</button>
+							</div>
+							<div class="row mt-3">
+								<div class="col">
+									<div class="row m-1">
+										<button type="button" class="btn btn-light" id="number" onclick="floorNum(5)">５</button>
+									</div>
+									<div class="row m-1">
+										<button type="button" class="btn btn-light" id="number" onclick="floorNum(4)">４</button>
+									</div>
+									<div class="row m-1">
+										<button type="button" class="btn btn-light" id="number" onclick="floorNum(3)">３</button>
+									</div>
+									<div class="row m-1">
+										<button type="button" class="btn btn-light" id="number" onclick="floorNum(2)">２</button>
+									</div>
+									<div class="row m-1">
+										<button type="button" class="btn btn-light" id="number" onclick="floorNum(1)">１</button>
+									</div>
+								</div>
+								<div class="col">
+									<div class="row m-1">
+										<button type="button" class="btn btn-light" id="number" onclick="floorNum(10)">１０</button>
+									</div>
+									<div class="row m-1">
+										<button type="button" class="btn btn-light" id="number" onclick="floorNum(9)">９</button>
+									</div>
+									<div class="row m-1">
+										<button type="button" class="btn btn-light" id="number" onclick="floorNum(8)">８</button>
+									</div>
+									<div class="row m-1">
+										<button type="button" class="btn btn-light" id="number" onclick="floorNum(7)">７</button>
+									</div>
+									<div class="row m-1">
+										<button type="button" class="btn btn-light" id="number" onclick="floorNum(6)">６</button>
+									</div>
+								</div>
+							</div>
+							<div class="row mt-3">
+								<div class="col">
+									<div class="row m-1">
+										<button type="button" class="btn btn-success" id="openButton" onclick="doorOpen()">開</button>
+									</div>
+								</div>
+								<div class="col">
+									<div class="row m-1">
+										<button type="button" class="btn btn-light" id="closeButton" onclick="doorClose()">閉</button>
+									</div>
+								</div>
+							</div>
+							<div class="row mt-3 text-center">
+								<h2>HITACHI</h2>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</main>
+	<!-- Main(End) -->
+
+	<!-- JavaScript -->
+	<script src="./libs/jquery/jquery-3.6.1.min.js"></script>
+	<script src="./libs/bootstrap/bootstrap.min.js"></script>
+	<script src="./main.js"></script>
+</body>
+</html>
